@@ -18,7 +18,7 @@ namespace кубик
         public Form1()
         {
             InitializeComponent();
-            
+            if (button1.Enabled == true) button2.Enabled = false;
         }
 
         public void pictureBox1_Click(object sender, EventArgs e)
@@ -33,66 +33,63 @@ namespace кубик
             switch (player1Roll)
             {
                 case 6:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice.gif");
+                    pictureBox1.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\6.gif");
                     label4.Text = "6";
                     break;
                 case 5:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice (1).gif");
+                    pictureBox1.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\5.gif");
                     label4.Text = "5";
                     break;
                 case 4:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice (4).gif");
+                    pictureBox1.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\4.gif");
                     label4.Text = "4";
                     break;
                 case 3:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice (2).gif");
+                    pictureBox1.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\3.gif");
                     label4.Text = "3";
                     break;
                 case 2:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice2-dice.gif");
+                    pictureBox1.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\2.gif");
                     label4.Text = "2";
                     break;
                 case 1:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice (3).gif");
+                    pictureBox1.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\1.gif");
                     label4.Text = "1";
                     break;
             }
-            
                 if (label4.Text.Length != 0) button1.Enabled = false;
                 else button1.Enabled = true;
-            
+            button2.Enabled = true;
         }
 
         public void button2_Click(object sender, EventArgs e)
         {
-           
-         
             Random random = new Random();
             int player2Roll = random.Next(1, 7);
             switch (player2Roll)
             {
                 case 6:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice.gif");
+                    pictureBox2.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\6.gif");
                     label2.Text = "6";
                     break;
                 case 5:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice (1).gif");
+                    pictureBox2.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\5.gif");
                     label2.Text = "5";
                     break;
                 case 4:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice (4).gif");
+                    pictureBox2.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\4.gif");
                     label2.Text = "4";
                     break;
                 case 3:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice (2).gif");
+                    pictureBox2.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\3.gif");
                     label2.Text = "3";
                     break;
                 case 2:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice2-dice.gif");
+                    pictureBox2.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\2.gif");
                     label2.Text = "2";
                     break;
                 case 1:
-                    pictureBox1.Image = Image.FromFile("C:\\Users\\Пользователь\\Desktop\\dice-roll-dice (3).gif");
+                    pictureBox2.Image = Image.FromFile("C:\\Users\\alexo\\OneDrive\\Рабочий стол\\Кубики\\1.gif");
                     label2.Text = "1";
                     break;
 
@@ -137,8 +134,9 @@ namespace кубик
             label2.Text = "";
             label5.Text = "";
             pictureBox1.Image = null;
+            pictureBox2.Image = null;
             button1.Enabled = true;
-            button2.Enabled = true;
+            button2.Enabled = false;
         }
     }
 }
